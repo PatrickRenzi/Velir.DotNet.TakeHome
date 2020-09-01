@@ -10,12 +10,14 @@ namespace TakeHome.Controllers
     public class FeedbackController : Controller
     {
         // GET: Feedback
-        
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Feedback()
         {
             return View();
         }
 
+        // POST: Feedback
+        [HttpPost]
         [ValidateInput(true)]
         public ActionResult Feedback(FeedbackForm form)
         {
